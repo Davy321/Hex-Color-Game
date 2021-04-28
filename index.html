@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Tillana:wght@800&display=swap" rel="stylesheet">
+	<link rel="manifest" href="manifest.json">
+
+    <title>Color Guessing Game</title>
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="client.js" defer></script>
+  </head>  
+  <body>
+    
+    <div id="mainMenu">
+      <div id="titleScreen">
+        <h1 id="mainTitle">Colors!</h1>
+        <p>A hexadecimal color code game</p>
+        <button id="MTButton" onclick="modeSelect()">Start</button>
+      </div>
+      
+      <div id="modeSelector">
+        <h2>Would you like to guess</h2>
+        <div id="MSHex" onclick="levelSelect(0)">Hex</div>
+        <p>OR</p>
+        <div id="MSColor" onclick="levelSelect(1)">Color</div>
+      </div>
+      
+      <div id="levelSelector">
+        <h1>Difficulty Selector:</h1>
+        <div onclick="startGame(0)">Effectively Colorblind</div>
+        <div onclick="startGame(1)">Average Eyesight</div>
+        <div onclick="startGame(2)">Color Aficionado</div>
+      </div>
+    </div>
+    
+    <div id="mainGame">
+      <h1>What is the color code for this color?</h1>
+
+      <div id="colorSample"></div>
+      
+      <div class="container">
+        <div id="a" class="answer">sdg</div>
+        <div id="b" class="answer">sdg</div>
+        <div id="c" class="answer">sdg</div>
+        <div id="d" class="answer">sdg</div>
+        <div id="e" class="answer">sdg</div>
+        <div id="f" class="answer">sdg</div>
+        <div id="g" class="answer">sdg</div>
+        <div id="h" class="answer">sdg</div>
+      </div>
+
+      <div class="answer">Score: <span id="score">0 / 0</span> </div>
+    </div>
+    
+    <div id="lightbox">
+      <div id="innerlightbox">
+          <h1>Game Over</h1>
+          <p>Your score was: <span id="finalScore"></span></p>
+          <button id="LBButton" onclick="restartGame()">Restart</button>
+      </div>
+    </div>
+  </body>
+</html>
